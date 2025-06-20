@@ -36,8 +36,11 @@ export default function App() {
   const totalABV = totalVolume ? ((totalAlcohol / totalVolume) * 100).toFixed(2) : 0;
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white p-6">
-      <h1 className="text-3xl font-bold mb-6">Alcohol Calculator</h1>
+    <div className="min-h-screen bg-gray-950 text-white p-6 space-y-6 font-sans">
+
+<h1 className="text-3xl font-bold flex items-center gap-2 text-pink-300">
+  🍸 Cocktail Alcohol Calculator
+</h1>
 
       <div className="flex gap-4 items-center mb-6">
         <label>Units:</label>
@@ -54,7 +57,7 @@ export default function App() {
           <div className="mb-2">
             <label>Name:</label>
             <input
-              className="w-full p-2 mt-1 bg-gray-700 rounded"
+className="w-full p-2 mt-1 bg-gray-800 rounded border border-gray-600 text-white placeholder-gray-400"
               value={ing.name}
               onChange={(e) => handleIngredientChange(idx, "name", e.target.value)}
               placeholder="Ingredient name"
@@ -64,7 +67,7 @@ export default function App() {
             <label>Volume ({unit}):</label>
             <input
               type="number"
-              className="w-full p-2 mt-1 bg-gray-700 rounded"
+className="w-full p-2 mt-1 bg-gray-800 rounded border border-gray-600 text-white placeholder-gray-400"
               value={ing.volume}
               onChange={(e) => handleIngredientChange(idx, "volume", e.target.value)}
             />
@@ -73,7 +76,7 @@ export default function App() {
             <label>ABV (%):</label>
             <input
               type="number"
-              className="w-full p-2 mt-1 bg-gray-700 rounded"
+className="w-full p-2 mt-1 bg-gray-800 rounded border border-gray-600 text-white placeholder-gray-400"
               value={ing.abv}
               onChange={(e) => handleIngredientChange(idx, "abv", e.target.value)}
             />
